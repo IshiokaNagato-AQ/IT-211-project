@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lexigrep — search your own text files</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg-image" aria-hidden="true"></div>
+  <div class="bg-overlay" aria-hidden="true"></div>
+
+  <main class="stage">
+
+    <header class="hero" id="hero">
+      <p class="kicker">hash table · trie · search</p>
+      <h1 class="title">Lexigrep</h1>
+      <p class="subtitle">Point it at your text files and search them the way a grep would — but instant, local, and never leaving your browser.</p>
+    </header>
+
+    <section class="loader" id="loader">
+      <div class="loader-row">
+        <button class="btn btn-primary" id="folderBtn" type="button">Select a folder</button>
+        <button class="btn btn-ghost" id="filesBtn" type="button">Add files</button>
+        <input type="file" id="folderInput" webkitdirectory directory multiple hidden>
+        <input type="file" id="filesInput" accept=".txt,.md,.csv,.log,text/plain" multiple hidden>
+        <span class="loader-hint" id="loaderHint">No files indexed yet</span>
+      </div>
+      <div class="chips" id="fileChips" hidden></div>
+    </section>
+
+    <section class="search" id="searchSection" hidden>
+      <div class="search-bar">
+        <span class="prompt">grep&gt;</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Type a word to search…" autocomplete="off" spellcheck="false">
+        <button class="btn btn-clear" id="clearAllBtn" type="button" title="Clear indexed files">Clear</button>
+      </div>
+
+      <ul class="suggestions" id="suggestions" hidden></ul>
+
+      <div class="mode-row" role="group" aria-label="Search mode">
+        <button class="mode active" data-mode="exact" type="button">Exact</button>
+        <button class="mode" data-mode="prefix" type="button">Starts with</button>
+        <button class="mode" data-mode="contains" type="button">Contains</button>
+        <button class="mode" data-mode="fuzzy" type="button">Fuzzy</button>
+      </div>
+
+      <div class="stats" id="stats">
+        <div class="stat"><span class="stat-value" id="statFiles">0</span><span class="stat-label">Files indexed</span></div>
+        <div class="stat"><span class="stat-value" id="statTerms">0</span><span class="stat-label">Unique terms</span></div>
+        <div class="stat"><span class="stat-value" id="statNodes">0</span><span class="stat-label">Trie nodes</span></div>
+        <div class="stat"><span class="stat-value" id="statTime">0ms</span><span class="stat-label">Build time</span></div>
+      </div>
+    </section>
+
+    <section class="results" id="results" aria-live="polite"></section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
