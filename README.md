@@ -1,4 +1,4 @@
-# Lexigrep
+# Text search
 
 A local keyword search engine for text files, built with plain HTML, CSS, and JavaScript — no frameworks, no build step, no server. Everything runs in the browser.
 
@@ -59,10 +59,10 @@ lexigrep/
 ## Pushing to GitHub
 
 ```bash
-cd lexigrep
+cd IT-211-project
 git init
 git add .
-git commit -m "Initial commit: Lexigrep keyword search"
+git commit -m "Initial commit: Text search"
 git branch -M main
 git remote add origin https://github.com/<your-username>/<repo-name>.git
 git push -u origin main
