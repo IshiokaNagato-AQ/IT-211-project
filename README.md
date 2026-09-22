@@ -48,11 +48,11 @@ Drop an image at `assets/background.jpg` (any name works, just update the path i
 
 ```
 lexigrep/
-├── index.html            # markup
-├── style.css              # theme, layout, animation
-├── script.js               # hash table, trie, search algorithms, UI logic
-├── data/                     # built-in "database" — .txt files + manifest.json
-├── assets/                    # put background.jpg here
+├── index.html     # markup
+├── style.css      # theme, layout, animation
+├── script.js      # hash table, trie, search algorithms, UI logic
+├── data/          # built-in "database" — .txt files + manifest.json
+├── assets/        # put background.jpg here
 └── README.md
 ```
 
