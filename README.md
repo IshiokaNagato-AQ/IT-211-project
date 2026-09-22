@@ -68,8 +68,6 @@ git remote add origin https://github.com/<your-username>/<repo-name>.git
 git push -u origin main
 ```
 
-To host it live for free, enable **GitHub Pages** in the repo's Settings → Pages, pointing at the `main` branch root — the site is static so it'll work as-is.
-
 ## Notes & possible extensions
 
 - Deletion from the hash table/trie isn't implemented directly; removing a file triggers a full rebuild from the remaining files, which is simplest and fast enough at this scale.
