@@ -47,7 +47,7 @@ Drop an image at `assets/background.jpg` (any name works, just update the path i
 ## Project structure
 
 ```
-lexigrep/
+IT-211-project/
 ├── index.html     # markup
 ├── style.css      # theme, layout, animation
 ├── script.js      # hash table, trie, search algorithms, UI logic
